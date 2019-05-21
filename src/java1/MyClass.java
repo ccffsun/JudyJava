@@ -1,4 +1,6 @@
+
 package java1;
+
 
 public class MyClass {
     public static void main(String[] args){
@@ -25,6 +27,10 @@ public class MyClass {
         float herNum=2.45f;
         double herNums=4.89892;
         System.out.println(herNum+herNums);
+
+        String s = "abcd";
+        s.indexOf('c');
+
 
 
 
