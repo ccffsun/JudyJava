@@ -1,9 +1,13 @@
 package learnXinYminutesJava;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.security.*;
+import java.util.HashSet;
 import  java.util.Scanner;
+import java.util.Set;
 
 public class LearnJava {
     public static void main (String[] args){
@@ -19,7 +23,7 @@ public class LearnJava {
         //use Scanner to read input
         //must import java.util.Scanner;
 
-        Scanner scanner=new Scanner(System.in);
+       /* Scanner scanner=new Scanner(System.in);
 
         String name=scanner.next();//read String input;
         byte numByte=scanner.nextByte();//read byte input;
@@ -27,7 +31,7 @@ public class LearnJava {
         float numFloat=scanner.nextFloat();//read float input;
         double numDouble=scanner.nextDouble();//read double input;
         boolean bool=scanner.nextBoolean();//read boolean input;
-
+        */
         //////////
         //variables//
         /////////
@@ -133,8 +137,139 @@ public class LearnJava {
         System.out.println(i--);
         System.out.println(--i);
 
+        //////////////////////
+        //Control Structures
+        /////////////////////
+        System.out.println("\n->Control Structures");
+
+        //If statements are c-like
+        int j=10;
+        if(j==10){
+            System.out.println("I get printed");
+        }else if(j>10){
+            System.out.println("I don't");
+        }else {
+            System.out.println("I also don't");
+        }
+
+        //While loop
+        int fooWhile=0;
+        while (fooWhile<100){
+            System.out.println(fooWhile);
+            //Increment the counter
+            //Iterated 100 times,fooWhile 0,1,2,3,....99
+            fooWhile++;
+        }
+        System.out.println("fooWhile Value: "+fooWhile);
+
+        //Do While loop
+        int fooDoWhile=0;
+        do{
+            System.out.println(fooDoWhile);
+            //Increment the counter
+            //Iterated 99 times ,fooDoWhile 0->99
+            fooDoWhile++;
+        }while(fooDoWhile<100);
+        System.out.println("fooDoWhile Value: "+fooDoWhile);
+
+        //For loop
+        int fooFor;
+        for(fooFor=0;fooFor<10;fooFor++){
+            System.out.println(fooFor);
+            //Iterated 10 times, fooFor0->9
+        }
+        System.out.println("fooFor Value: "+ fooFor);
+
+        //Nested For Loop Exit with Lable
+        int u=0;
+        int v=0;
+        outer:
+        for (u=0;u<10;u++){
 
 
+            for (v=0;v<10;v++){
+                if(u==5&&v==5){
+                    break outer;
+                    //breaks out of outer loop instead of only inner one
+                }
+            }
+
+        } System.out.println(u+","+v);
+
+        //for Each Loop -Iterate over arrays as well as objects
+        int[] fooList ={1,2,3,4,5,6,7,8,9};
+        for(int bar:fooList){
+            System.out.println(bar);
+        }
+
+        int month=3;
+        String monthString;
+        switch (month){
+            case 1:monthString="January";
+            break;
+            case 2:monthString="February";
+            break;
+            case 3:monthString="March";
+            break;
+            default:monthString="Some other month";
+            break;
+        }
+        System.out.println("Swithch Case Result: "+monthString);
+
+
+        //Try-with-resources
+        //the class must implement java.lang.AutoCloseable.
+        try(BufferedReader br= new BufferedReader(new FileReader("foo.txt"))){
+            System.out.println(br.readLine());
+        }catch (Exception ex){
+            System.out.println("readLine() failed");
+        }
+
+        int foo=5;
+        String bar=(foo<10)?"A":"B";
+        System.out.println("bar: "+bar);
+
+
+        ////////////
+        //Converting Data Type
+        ////////////
+
+        //String to Integer
+        Integer.parseInt("123");
+        //Integer to String
+        Integer.toString(123);
+        Double.parseDouble("343.43");
+        Double.toString(3.1434);
+        Float.toString(3.44f);
+        Long.parseLong("2389283");
+        Long.toString(48938493);
+        System.out.println(String.valueOf('c'));
+
+        ////////////////////////
+        //Classes and Functions
+        ///////////////////////
+
+        System.out.println("\n->Classes&Functions");
+
+        Bicycle trek=new Bicycle();
+        trek.speedUp(3);
+        trek.setCadence(100);
+        System.out.println("trek info: "+trek.toString());
+
+       /* private static final Set<String> COUNTRIES=new HashSet<String>();
+        static {
+            COUNTRIES.add("DENMARK");
+            COUNTRIES.add("SWEDEN");
+            COUNTRIES.add("FINLAND");
+        }
+
+        private static final Set<String> COUNTRIES2= new HashSet<String>(){{
+            add("DENMARK");
+            add("SWEDEN");
+            add("FINLAND");
+        }}
+
+        */
 
     }
 }
