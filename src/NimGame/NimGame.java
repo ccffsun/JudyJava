@@ -8,22 +8,23 @@ import java.util.Random;
 
 public class NimGame {
     public int sticks = 37;
-    //public int n = sticks / 3;
     int playerTake1 = 3;
     int playerTake2 = 1;
     String c = "";
+    String templateStr="I've take %d . Now there are %d sticks .It's your turn , Mr.Computer.";
 
     public void thePlayerTake() {
         int n = sticks / 3;
+        int m = sticks%3;
         if (n == 1) {
             System.out.println(" YOU KNOW WHAT?! I already know who wins!");
         } else if (n % 2 == 0 && n>2) {
             sticks = sticks - playerTake1;
-            c = String.format("I've take %d . Now there are %d sticks .It's your turn , Mr.Computer.", playerTake1, sticks);
+            c = String.format(templateStr, playerTake1, sticks);
             System.out.println(c);
         } else {
             sticks = sticks - playerTake2;
-            c = String.format("I've take %d . Now there are %d sticks .It's your turn , Mr.Computer.", playerTake2, sticks);
+            c = String.format(templateStr, playerTake2, sticks);
             System.out.println(c);
         }
 
@@ -40,21 +41,21 @@ public class NimGame {
     public static void main(String[] args) {
         NimGame nim = new NimGame();
         int i = 1;
+        String winner="";
         while (nim.sticks > 0) {
             if (i % 2 == 0) {
                 nim.theComputerTake();
-                if(nim.sticks<=3){
-                    System.out.println("Game over, the player win the game! ");
-                    break;
-                }
-
+                winner = "Player";
             } else {
                 nim.thePlayerTake();
-                if(nim.sticks<=3){
-                    System.out.println("Game over, the computer win the game! ");
-                    break;
-                }
+                winner = "Computer";
             }
+
+            if(nim.sticks<=3){
+                System.out.println(String.format("Game over, the %s win the game! ",winner));
+                break;
+            }
+
             i++;
         }
     }
