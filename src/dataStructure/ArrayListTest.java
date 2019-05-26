@@ -1,21 +1,22 @@
 package dataStructure;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;  // Import the Collections class
 
 public class ArrayListTest {
             public void Arraypractise() {
-                ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+                List<Integer> myNumbers = new ArrayList<Integer>();
                 myNumbers.add(3);
                 myNumbers.add(5);
                 myNumbers.add(9);
                 myNumbers.add(79);
 
-                ArrayList<String> myString = new ArrayList<String>();
+                List<String> myString = new ArrayList<String>();
                 myString.add("Hello ");
                 myString.add("World ");
                 myString.add("! ");
 
-                ArrayList<Boolean> myBoo = new ArrayList<Boolean>();
+                List<Boolean> myBoo = new ArrayList<Boolean>();
                 myBoo.add(true);
                 myBoo.add(false);
                 myBoo.add(false);
