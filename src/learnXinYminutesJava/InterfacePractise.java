@@ -1,29 +1,30 @@
-/*package learnXinYminutesJava;
+package learnXinYminutesJava;
 
-public interface Edible{
-    public  void eat();
+public interface InterfacePractise {
+    void move();
 }
-public interface Digestible{
-    public  void  digestible();
-    public default void defaultMethod(){
+
+interface Edible {
+    void eat();
+}
+
+interface Digestible {
+    public void digestible();
+
+    public default void defaultMethod() {
         System.out.println("Hi from default method...");
     }
 }
 
-public class Fruit implements Edible,Digestible{
+class Fruit implements Edible,Digestible {
     @Override
-    public  void eat(){
+    public void eat() {
 
     }
+
     @Override
-    public  void digest(){
+    public void digestible() {
 
     }
 }
 
-publicn class ExampleClass extends ExampleClassParent implements InterfaceOnee,
-        IterfaceOne,{
-    @
-}
-
- */

@@ -95,9 +95,10 @@ public class LearnJava {
         ///////////////////
         //declare a array, the array size must be decided upon instantiation;
         int[] intArray= new int[10];
+        int l=intArray.length;
         String[] stringArray=new String[1];
         boolean[] boolArray=new boolean[100];
-
+        l=boolArray.length;
         //declare and initialize an array
         int[] y={9000,1000,1337};
         String names[]={"Bob","John","Fred","Juan Pedro"};

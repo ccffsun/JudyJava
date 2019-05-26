@@ -7,9 +7,9 @@ package NimGame;
 import java.util.Random;
 
 public class NimGame {
-    public int sticks = 37;
-    int playerTake1 = 3;
-    int playerTake2 = 1;
+    private int sticks = 37;
+    private int playerTake1 = 3;
+    private int playerTake2 = 1;
     String c = "";
     String templateStr="I've take %d . Now there are %d sticks .It's your turn , Mr.Computer.";
 
