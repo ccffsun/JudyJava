@@ -1,6 +1,8 @@
 package diceRoll;
 
 import java.awt.datatransfer.StringSelection;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Random;
 import java.util.Scanner;
 import java.io.IOException;
@@ -26,16 +28,16 @@ public class DiceRoll {
         try{
            DiceRoll rollTheDice=new DiceRoll();
            rollTheDice.start();
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
            while(true){//While loop to read the user's input
-               char val =(char)System.in.read();//System.in.read的应用
-               if(val==10){
+               String val = br.readLine();
+               if(val.trim().equals("")){
                    rollTheDice.end();
                    System.exit(0);
                }
                else{
                    System.out.println("Please press the \"Enter\"!");
                }
-
            }
         }catch (IOException e) {
             e.printStackTrace();//catch的IOException 应用
