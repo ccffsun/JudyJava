@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MiceAndBottles {
-    int n;
+    int n = 100;
     ArrayList<Integer> miceOne = new ArrayList<>();
     ArrayList<Integer> miceTwo = new ArrayList<>();
     ArrayList<Integer> miceThree = new ArrayList<>();
@@ -20,12 +20,10 @@ public class MiceAndBottles {
     ArrayList<Integer> miceSeven = new ArrayList<>();
 
     public void miceDrinkBottle() {
-        for (int i = 0b1; i <= Integer.parseInt(Integer.toBinaryString(n)); i++) {
-            for (int j = 0; j < 6; j++) {
-                int k;
-                int h = Integer.parseInt(Integer.toBinaryString(2 ^ j));
-                k = h & i;
-
+        for (int j = 0; j < 7; j++) { //1-100 binary
+            for (int i = 1; i <= 100; i++) {
+                int h = (int) Math.pow(2, j);
+                int k = h & i;
                 if (k != 0) {
                     if (j == 0) {
                         miceOne.add(i);
@@ -48,8 +46,7 @@ public class MiceAndBottles {
         }
     }
 
-
-    public void arraylist() {
+    public void printOut() {
         ArrayList<ArrayList<Integer>> mice = new ArrayList<ArrayList<Integer>>();
         mice.add(miceOne);
         mice.add(miceTwo);
@@ -59,11 +56,11 @@ public class MiceAndBottles {
         mice.add(miceSix);
         mice.add(miceSeven);
 
-
-        for (int i = 0; i < 6; i++) {
-            for (int j : mice.get(i)) {
-                System.out.println(j);
-            }
+        int i = 1;
+        for (ArrayList<Integer> u : mice) {
+            System.out.println("BOTTLE" + i + ":" + u);
+            i++;
         }
     }
 }
+
