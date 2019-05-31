@@ -10,7 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MiceAndBottles {
+    //定义有n瓶药水
     int n = 100;
+    //定义每只老鼠药吃的药水的集合
     ArrayList<Integer> miceOne = new ArrayList<>();
     ArrayList<Integer> miceTwo = new ArrayList<>();
     ArrayList<Integer> miceThree = new ArrayList<>();
@@ -19,9 +21,10 @@ public class MiceAndBottles {
     ArrayList<Integer> miceSix = new ArrayList<>();
     ArrayList<Integer> miceSeven = new ArrayList<>();
 
+    //判断二进制的&操作，除去其他位数看是否为1，如果是1，老鼠需要吃这瓶药水，每瓶药水归到每只老鼠的名下
     public void miceDrinkBottle() {
         for (int j = 0; j < 7; j++) { //1-100 binary
-            for (int i = 1; i <= 100; i++) {
+            for (int i = 1; i <= n; i++) {
                 int h = (int) Math.pow(2, j);
                 int k = h & i;
                 if (k != 0) {
@@ -45,7 +48,7 @@ public class MiceAndBottles {
             }
         }
     }
-
+    //方便打印的method 把老鼠集合后让printOut()循环打印
     public void printOut() {
         ArrayList<ArrayList<Integer>> mice = new ArrayList<ArrayList<Integer>>();
         mice.add(miceOne);
@@ -56,11 +59,25 @@ public class MiceAndBottles {
         mice.add(miceSix);
         mice.add(miceSeven);
 
+        //循环打印并帮老鼠编号
+        System.out.println("Mice i drink the drops from [....] bottles :");
         int i = 1;
         for (ArrayList<Integer> u : mice) {
-            System.out.println("BOTTLE" + i + ":" + u);
+
+            System.out.println("Mice" + i + ":" + u);
             i++;
         }
     }
 }
+
+//1. math.power(x,y) VS x^y
+//2. for(i=0;i<n;i++){
+//      for(j=0;j<m;j++){
+//       if(i=0){
+//         System.out.println(j);
+//        }
+//    注意for循环嵌套的顺序
+//3.ArrayList 是一个class 不可以定义是直接添加元素
+//4.ArrayList内可以嵌套ArrayList
+//5.最后i的循环
 
