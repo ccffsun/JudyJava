@@ -6,5 +6,7 @@ public class DataStructureMain {
     a.Arraypractise();
     GroceryList myList=new GroceryList();
     myList.GroceryList();
+    HashMapTest test1 = new HashMapTest();
+    test1.HashPractise();
     }
 }
