@@ -11,5 +11,9 @@ public class Main {
         int [] b={1,2,3,4,5,5,3,4,5,2,0,4};
         int v=removeE.removeElement(b,4);
         System.out.println(v);
+
+        ReverseInteger RI = new ReverseInteger();
+        int ri =RI.reverse(1534236469);
+        System.out.println(ri);
     }
 }
