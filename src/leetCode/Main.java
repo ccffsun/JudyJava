@@ -13,7 +13,7 @@ public class Main {
         System.out.println(v);
 
         ReverseInteger RI = new ReverseInteger();
-        int ri =RI.reverse(1534236469);
+        int ri =RI.reverse(-153478239);
         System.out.println(ri);
     }
 }
