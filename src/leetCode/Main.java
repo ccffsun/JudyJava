@@ -15,5 +15,14 @@ public class Main {
         ReverseInteger RI = new ReverseInteger();
         int ri =RI.reverse(-153478239);
         System.out.println(ri);
+
+        //two sum
+        TwoSum tw = new TwoSum();
+        int [] r={1,2,100,3,5,6};
+        int[] s=tw.twoSum(r,106);
+        System.out.println(s);
+        int[] s2=   tw.hashTwoSum(r,106);
+        System.out.println(s2);
+
     }
 }
