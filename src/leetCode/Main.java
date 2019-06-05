@@ -20,9 +20,9 @@ public class Main {
         TwoSum tw = new TwoSum();
         int [] r={1,2,100,3,5,6};
         int[] s=tw.twoSum(r,106);
-        System.out.println(s);
+        System.out.println(s[0]+","+s[1]);
         int[] s2=   tw.hashTwoSum(r,106);
-        System.out.println(s2);
+        System.out.println(s2[0]+","+s2[1]);
 
     }
 }
