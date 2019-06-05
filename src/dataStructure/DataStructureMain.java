@@ -9,6 +9,6 @@ public class DataStructureMain {
     HashMapTest test1 = new HashMapTest();
     test1.HashPractise();
         ListNodeTest lnt = new ListNodeTest();
-        lnt.printList(lnt.ListNodePractise());
+        lnt.ListNodePractise();
     }
 }
