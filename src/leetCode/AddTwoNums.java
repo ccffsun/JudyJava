@@ -12,7 +12,7 @@ public class AddTwoNums {
                 if((l1!=null)&&(l2!=null)){
                     this.NotNullSum(l1,l2);
                 }
-                else if((l1==null)&&(l2 !=null)){
+                else if((l1==null)&&(l2 !=null)){1`
                    L=l2.val;
                    l2=l2.next;
                 }
@@ -55,9 +55,10 @@ public class AddTwoNums {
            carry = sum / 10;
            now.next = new ListNode(sum % 10);
            now = now.next;
+           if (m!=null) m=m.next;
+           if (n!=null) n=n.next;
        }
-       if (m!=null) m=m.next;
-       if (n!=null) n=n.next;
+
        if (carry>0) now.next= new ListNode(carry);
        return head.next;
    }

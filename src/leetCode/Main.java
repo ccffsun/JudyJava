@@ -1,5 +1,7 @@
 package leetCode;
 
+import java.util.List;
+
 public class Main {
     public static void main(String [] args){
         System.out.println("Hello world !");
@@ -24,5 +26,24 @@ public class Main {
         int[] s2=   tw.hashTwoSum(r,106);
         System.out.println(s2[0]+","+s2[1]);
 
+        //Add two Numbers
+        AddTwoNums atn = new AddTwoNums();
+        ListNode m = new ListNode(2);
+        ListNode m2 = new ListNode(5);
+        ListNode m3 = new ListNode(7);
+        ListNode m4 = new ListNode(9);
+        m.next=m2;
+        m2.next=m3;
+        m3.next=m4;
+
+        ListNode n = new ListNode(4);
+        ListNode n2 = new ListNode(6);
+        ListNode n3 = new ListNode(7);
+        ListNode n4 = new ListNode(9);
+        n.next=n2;
+        n2.next=n3;
+        n3.next=n4;
+        ListNode output = atn.addTwoNumbers(m,n);
+        System.out.println(output.val);
     }
 }
