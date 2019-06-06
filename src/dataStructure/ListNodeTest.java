@@ -15,6 +15,7 @@ public class ListNodeTest {
     public ListNode setup(){
         ListNode ln1 = new ListNode(1);
         ListNode ln2 = new ListNode(2);
+
         ListNode ln3 = new ListNode(3);
         ln1.next = ln2;
         ln2.next = ln3;
