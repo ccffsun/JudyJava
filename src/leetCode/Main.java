@@ -45,5 +45,14 @@ public class Main {
         n3.next=n4;
         ListNode output = atn.addTwoNumbers(m,n);
         System.out.println(output.val);
+
+        //swap nodes in pairs
+        SwapNodesInPairs snip =new SwapNodesInPairs();
+        ListNode x =snip.swapPairs(m);
+        System.out.println(x.val);
+        while(x!=null){
+            System.out.println(x.val);
+            x=x.next;
+        }
     }
 }
