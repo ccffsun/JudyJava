@@ -21,4 +21,17 @@ public class RemoveDuplicatesFromSortedArray {
             return s;
         }
     }
+
+    public int removeDuplicatesII(int[] nums) {
+        int s=1;
+        int prev=nums[0];
+        for(int f=1;f<nums.length;f++){
+            if(nums[f]!=prev){
+                nums[s]=nums[f];
+                prev=nums[f];
+                s++;
+            }
+        }
+        return s;
+    }
 }

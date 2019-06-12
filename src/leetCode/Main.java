@@ -54,5 +54,17 @@ public class Main {
             System.out.println(x.val);
             x=x.next;
         }
+        //move0AheadOfArray
+        Move0AheadOfArray m0a=new Move0AheadOfArray();
+        int[] ma={0,1,1,0,0,0,1,1,1,0,0,0,1};
+        int[] m0=m0a.move0Ahead(ma);
+        for(int mint :m0){
+            System.out.print(mint);
+        }
+        int[] m1=m0a.move0AheadII(ma);
+        for(int mint:m1){
+            System.out.print(mint);
+        }
+
     }
 }
