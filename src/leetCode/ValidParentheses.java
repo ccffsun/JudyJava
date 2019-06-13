@@ -14,7 +14,7 @@ public class ValidParentheses {
 
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (parentheses.containsKey(c)) {
+            if (parentheses.containsKey(c)) {//if it's a closing parentheses,get opening parentheses, so key is closing parentheses and value is opening parentheses.
                 char topElem = (stackParentheses.empty()) ? '#' : stackParentheses.pop();
                 if (topElem != parentheses.get(c)) {
                     return false;

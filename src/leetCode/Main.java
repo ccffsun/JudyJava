@@ -1,5 +1,7 @@
 package leetCode;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.List;
 
 public class Main {
@@ -56,15 +58,24 @@ public class Main {
         }
         //move0AheadOfArray
         Move0AheadOfArray m0a=new Move0AheadOfArray();
-        int[] ma={0,1,1,0,0,0,1,1,1,0,0,0,1};
+        int[] ma={1,1,0};
         int[] m0=m0a.move0Ahead(ma);
         for(int mint :m0){
             System.out.print(mint);
         }
+
+        System.out.println();
+
         int[] m1=m0a.move0AheadII(ma);
         for(int mint:m1){
             System.out.print(mint);
         }
 
+        System.out.println();
+
+        int[]mo={1,1,1,2,2,3};
+        RemoveDuplicatesFromSortedArrayII removeII=new RemoveDuplicatesFromSortedArrayII();
+        int num=removeII.removeDuplicates(mo);
+        System.out.println(num);
     }
 }

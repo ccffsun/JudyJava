@@ -3,6 +3,7 @@ package leetCode;
 
 //put all the 0 before other elements in an array
 //slow and fast
+//when there are 3 kinds of elements in the array , see the leetcode 75-------sort ccolors
 
 public class Move0AheadOfArray {
     public int [] move0Ahead(int [] a){
@@ -37,5 +38,8 @@ public class Move0AheadOfArray {
             return a;
         }
     }
+
+
+
 }
 
