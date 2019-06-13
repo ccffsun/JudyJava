@@ -13,7 +13,27 @@ package leetCode;
 
 public class SortColors {
     public void sortColors(int[] nums) {
-
+        if (nums.length == 0 || nums.length == 1) {
+            System.out.println("WRONG COLOR");
+        }
+        int h = 0;
+        int t = nums.length - 1;
+        int i = 0;
+        while (h <= i && t >= i) {
+            if (nums[i] == 0) {
+                int temp = nums[i];
+                nums[i] = nums[h];
+                nums[h] = temp;
+                h++;
+                i++;
+            } else if (nums[i] == 1) {
+                i++;
+            } else if (nums[i] == 2) {
+                int temp = nums[i];
+                nums[i] = nums[t];
+                nums[t] = temp;
+                t--;
+            }
+        }
     }
-
 }
