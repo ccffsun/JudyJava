@@ -26,10 +26,7 @@ import java.util.Stack;
 
     /** Removes the element from in front of queue and returns that element. */
     public int pop() {
-        if(output.isEmpty()) {
-            throw new EmptyStackException();
-        }
-        else return output.pop();
+         return output.pop();
 
     }
 
@@ -39,10 +36,7 @@ import java.util.Stack;
     //         } catch (EmptyStackException e) {
     //         }
     public int peek() {
-        if(output.isEmpty()) {
-         throw new EmptyStackException();
-        }
-        else return output.peek();
+        return output.peek();
     }
 
     /** Returns whether the queue is empty. */
