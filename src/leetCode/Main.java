@@ -77,5 +77,23 @@ public class Main {
         RemoveDuplicatesFromSortedArrayII removeII=new RemoveDuplicatesFromSortedArrayII();
         int num=removeII.removeDuplicates(mo);
         System.out.println(num);
+
+
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+        ImplementQueueUsingStack myQueue =new ImplementQueueUsingStack();
+        myQueue.MyQueue();
+        myQueue.push(3);
+        int pa2=myQueue.pop();
+        int pa3=myQueue.peek();
+        boolean pa4=myQueue.empty();
+        int pa5=myQueue.pop();
+        System.out.println(pa2+" "+pa3+" "+pa4);
     }
 }
