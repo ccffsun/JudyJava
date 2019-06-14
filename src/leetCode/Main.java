@@ -90,10 +90,12 @@ public class Main {
         ImplementQueueUsingStack myQueue =new ImplementQueueUsingStack();
         myQueue.MyQueue();
         myQueue.push(3);
-        int pa2=myQueue.pop();
-        int pa3=myQueue.peek();
+        myQueue.push(2);
+        int pa2=myQueue.peek();
+        int pa3=myQueue.pop();
+
         boolean pa4=myQueue.empty();
-        int pa5=myQueue.pop();
+
         System.out.println(pa2+" "+pa3+" "+pa4);
     }
 }

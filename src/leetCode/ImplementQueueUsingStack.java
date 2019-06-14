@@ -4,8 +4,8 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
     public class ImplementQueueUsingStack {
-    private Stack<Integer> input;
-    private Stack<Integer> output;
+    private Stack<Integer > input  =null;
+    private Stack<Integer> output=null;
     /** Initialize your data structure here. */
     public void MyQueue() {
         input=new Stack<>();
@@ -14,14 +14,14 @@ import java.util.Stack;
 
     /** Push element x to the back of queue. */
     public void push(int x) {
-        while (!input.empty()) {
-            while (!output.empty()) {
-                output.pop();
-            }
-            output.push(input.pop());
+        while (!output.empty()) {
+            input.push(output.pop());
         }
         input.push(x);
-        output.push(input.pop());
+        while (!input.empty()){
+            output.push(input.pop());
+        }
+
     }
 
     /** Removes the element from in front of queue and returns that element. */
