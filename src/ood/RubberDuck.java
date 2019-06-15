@@ -1,7 +1,7 @@
 package ood;
 
-public class RubberDuck extends Duck {
-    @Override
+public class RubberDuck extends Duck implements Quackable {
+
     public void quack() {
         System.out.println("Pipipi!!!");
     }
@@ -11,8 +11,6 @@ public class RubberDuck extends Duck {
         System.out.println("RubberDuck display!!!");
     }
 
-    @Override
-    public void fly() {
 
-    }
+
 }

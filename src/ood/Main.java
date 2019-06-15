@@ -5,10 +5,8 @@ public class Main {
         System.out.println("Hello World ");
         System.out.println("This is duck: ");
         Duck duck =new Duck();
-        duck.quack();
         duck.swim();
         duck.display();
-        duck.fly();
 
         System.out.println("This is Mallard Duck: ");
         MallardDuck md = new MallardDuck();
@@ -29,13 +27,11 @@ public class Main {
         rud.quack();
         rud.swim();
         rud.display();
-        rud.fly();
+
 
         System.out.println("This is Decoy Duck: ");
         DecoyDuck dd = new DecoyDuck();
-        dd.quack();
         dd.swim();
         dd.display();
-        dd.fly();
     }
 }
