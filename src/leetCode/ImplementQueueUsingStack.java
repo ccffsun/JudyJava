@@ -3,34 +3,47 @@ package leetCode;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-    public class ImplementQueueUsingStack {
-    private Stack<Integer > input  =null;
-    private Stack<Integer> output=null;
-    /** Initialize your data structure here. */
-    public void MyQueue() {
-        input=new Stack<>();
-        output=new Stack<>();
+public class ImplementQueueUsingStack {
+    public ImplementQueueUsingStack() {
+
     }
 
-    /** Push element x to the back of queue. */
+    private Stack<Integer> input = null;
+    private Stack<Integer> output = null;
+
+    /**
+     * Initialize your data structure here.
+     */
+    public void MyQueue() {
+        input = new Stack<>();
+        output = new Stack<>();
+    }
+
+    /**
+     * Push element x to the back of queue.
+     */
     public void push(int x) {
         while (!output.empty()) {
             input.push(output.pop());
         }
         input.push(x);
-        while (!input.empty()){
+        while (!input.empty()) {
             output.push(input.pop());
         }
 
     }
 
-    /** Removes the element from in front of queue and returns that element. */
+    /**
+     * Removes the element from in front of queue and returns that element.
+     */
     public int pop() {
-         return output.pop();
+        return output.pop();
 
     }
 
-    /** Get the front element. */
+    /**
+     * Get the front element.
+     */
     // try {
     //            s.pop();
     //         } catch (EmptyStackException e) {
@@ -39,9 +52,11 @@ import java.util.Stack;
         return output.peek();
     }
 
-    /** Returns whether the queue is empty. */
+    /**
+     * Returns whether the queue is empty.
+     */
     public boolean empty() {
-    return output.isEmpty();
+        return output.isEmpty();
     }
 }
 

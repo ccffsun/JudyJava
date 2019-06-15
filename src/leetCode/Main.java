@@ -3,6 +3,7 @@ package leetCode;
 import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.List;
+import java.util.Stack;
 
 public class Main {
     public static void main(String [] args){
@@ -97,5 +98,8 @@ public class Main {
         boolean pa4=myQueue.empty();
 
         System.out.println(pa2+" "+pa3+" "+pa4);
+
+        Stack<Integer> testStack = null;
+        testStack.push(1);
     }
 }
