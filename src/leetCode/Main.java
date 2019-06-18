@@ -99,7 +99,12 @@ public class Main {
 
         System.out.println(pa2+" "+pa3+" "+pa4);
 
+        /*
         Stack<Integer> testStack = null;
         testStack.push(1);
+         */
+
+        Hannoi h = new Hannoi();
+        h.move(3,"A","B","C");
     }
 }
