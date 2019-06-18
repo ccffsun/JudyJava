@@ -20,3 +20,14 @@ public class CoinChange {
         return f[amount];
     }
 }
+
+//minValue -mv
+//mv=max
+//mv=min(f[i-2]+1,mv)
+//mv=min(f[i-5]+1,mv)
+//mv=min(f[i-7]+1,mv)
+//f[i]=mv
+//
+//f[i]=max
+//for(j=0;j<a.length;j++){
+// f[i]=min(f[i-a[j]+1,f[i])
