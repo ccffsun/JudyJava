@@ -74,7 +74,7 @@ public class Main {
 
         System.out.println();
 
-        int[]mo={1,1,1,2,2,3};
+        int[]mo={1,2,4,1,7,8,3};
         RemoveDuplicatesFromSortedArrayII removeII=new RemoveDuplicatesFromSortedArrayII();
         int num=removeII.removeDuplicates(mo);
         System.out.println(num);
@@ -106,5 +106,9 @@ public class Main {
 
         Hannoi h = new Hannoi();
         h.move(3,"A","B","C");
+
+        MaxSumOfNoAdjectElement maxsum= new  MaxSumOfNoAdjectElement();
+        int f=maxsum.maxSum(mo,6);
+        System.out.println(f);
     }
 }
