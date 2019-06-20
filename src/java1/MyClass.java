@@ -31,7 +31,10 @@ public class MyClass {
         String s = "abcd";
         s.indexOf('c');
 
-
+        int [] f ={3,5,6,2,9,8,1};
+        for(int i=f.length-1;i>=0;i--){
+            System.out.println(f[i]);
+        }
 
 
     }

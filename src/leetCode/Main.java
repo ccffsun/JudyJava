@@ -114,7 +114,7 @@ public class Main {
 
         // int[]mo={1,2,4,1,7,8,3};
         TargetSumOfArray ts= new TargetSumOfArray();
-        boolean tsa=ts.targetSumOfArray(mo,0);
+        boolean tsa=ts.targetSumOfArray(mo,100);
         System.out.println(tsa);
     }
 }
