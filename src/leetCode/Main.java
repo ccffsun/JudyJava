@@ -110,5 +110,11 @@ public class Main {
         MaxSumOfNoAdjectElement maxsum= new  MaxSumOfNoAdjectElement();
         int f=maxsum.maxSum(mo,6);
         System.out.println(f);
+
+
+        // int[]mo={1,2,4,1,7,8,3};
+        TargetSumOfArray ts= new TargetSumOfArray();
+        boolean tsa=ts.targetSumOfArray(mo,0);
+        System.out.println(tsa);
     }
 }
