@@ -9,6 +9,7 @@ public class TargetSumOfArray {
 
         for (j = 0; j < s + 1; j++) {
             subset[0][j] = false;
+        }
             for (i = 0; i < n + 1; i++) {
                 subset[i][0] = true;
             }
@@ -23,7 +24,7 @@ public class TargetSumOfArray {
                 }
 
             }
-        }
+        
         return subset[n][s];
     }
 }
