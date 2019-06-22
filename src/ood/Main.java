@@ -10,28 +10,35 @@ public class Main {
 
         System.out.println("This is Mallard Duck: ");
         MallardDuck md = new MallardDuck();
-        md.quack();
         md.swim();
         md.display();
-        md.fly();
+        md.performQuack();
+        md.performFly();
+
 
         System.out.println("This is Read Head Duck: ");
         RedHeadDuck rd = new RedHeadDuck();
-        rd.quack();
-        rd.swim();
         rd.display();
-        rd.fly();
+        rd.performQuack();
+        rd.swim();
+        rd.performFly();
 
         System.out.println("This is Rubber Duck: ");
         RubberDuck rud = new RubberDuck();
-        rud.quack();
-        rud.swim();
         rud.display();
+        rud.performQuack();
+        rud.performFly();
+        rud.swim();
+
 
 
         System.out.println("This is Decoy Duck: ");
         DecoyDuck dd = new DecoyDuck();
-        dd.swim();
         dd.display();
+        dd.swim();
+        dd.performFly();
+        dd.performQuack();
+
+
     }
 }

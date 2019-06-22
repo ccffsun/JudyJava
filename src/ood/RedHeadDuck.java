@@ -1,6 +1,11 @@
 package ood;
 
-public class RedHeadDuck extends Duck implements Flyable,Quackable{
+public class RedHeadDuck extends Duck {
+    public RedHeadDuck(){
+        flyBehavior=new FlyWithWings();
+        quackBehavior=new Quack();
+    }
+    /*
     @Override
     public void fly() {
         System.out.println("Fly!!!");
@@ -10,6 +15,8 @@ public class RedHeadDuck extends Duck implements Flyable,Quackable{
     public void quack() {
         System.out.println("Quack!!!");
     }
+
+     */
 
     @Override
     public void display() {
