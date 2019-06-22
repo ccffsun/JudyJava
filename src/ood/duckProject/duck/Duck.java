@@ -1,4 +1,7 @@
-package ood;
+package ood.duckProject.duck;
+
+import ood.duckProject.fly.FlyBehavior;
+import ood.duckProject.quack.QuackBehavior;
 
 public class Duck {
 

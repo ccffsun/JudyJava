@@ -1,4 +1,7 @@
-package ood;
+package ood.duckProject.duck;
+
+import ood.duckProject.fly.FlyNoWay;
+import ood.duckProject.quack.Squeak;
 
 public class RubberDuck extends Duck{
     public RubberDuck(){

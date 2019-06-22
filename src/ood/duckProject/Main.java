@@ -1,4 +1,9 @@
-package ood;
+package ood.duckProject;
+
+import ood.duckProject.duck.*;
+import ood.duckProject.fly.FlyWithWings;
+import ood.duckProject.quack.Quack;
+import ood.duckProject.quack.QuackBehavior;
 
 public class Main {
     public static void main(String[] args) {

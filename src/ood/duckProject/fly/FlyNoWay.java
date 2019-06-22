@@ -1,4 +1,4 @@
-package ood;
+package ood.duckProject.fly;
 
 public class FlyNoWay implements FlyBehavior {
     public void fly(){

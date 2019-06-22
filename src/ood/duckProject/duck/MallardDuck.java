@@ -1,4 +1,7 @@
-package ood;
+package ood.duckProject.duck;
+
+import ood.duckProject.fly.FlyWithWings;
+import ood.duckProject.quack.Quack;
 
 public class MallardDuck extends Duck {
     public MallardDuck() {

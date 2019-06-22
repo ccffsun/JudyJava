@@ -1,4 +1,4 @@
-package ood;
+package ood.duckProject.quack;
 
 public class MuteQuack implements QuackBehavior {
     public void quack(){
