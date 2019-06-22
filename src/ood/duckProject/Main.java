@@ -14,7 +14,7 @@ public class Main {
         duck.display();
 
         System.out.println("This is Mallard Duck: ");
-        MallardDuck md = new MallardDuck();
+        Duck md = new MallardDuck();
         md.swim();
         md.display();
         md.performQuack();

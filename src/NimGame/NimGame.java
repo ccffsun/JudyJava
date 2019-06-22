@@ -71,7 +71,7 @@ be called only once when the program run the object casting.
 multiple,if n!==0, it's a odd multiple. The strategy to win the game is that the player has to leave odd multiple of 3
 sticks to the computer , but here n should greater than 2 ,which means you should leave at least more than 6 sticks to the computer ,
 then no matter how many sticks the computer takes, the player wins.
-4.The NimGame has a structure of some variables and three methods ,thePlayerTake() ,theComputerTake() and main(),in the
- main method you can't call the variables int sticks until you instance the NimGame class. That's the differences between
+4.The NimGame has a structure of some variables and three methods ,thePlayerTake() ,theComputerTake() and Main(),in the
+ Main method you can't call the variables int sticks until you instance the NimGame class. That's the differences between
  the classes and objects.
  */
