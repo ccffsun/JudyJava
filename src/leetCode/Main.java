@@ -116,5 +116,11 @@ public class Main {
         TargetSumOfArray ts= new TargetSumOfArray();
         boolean tsa=ts.targetSumOfArray(mo,100);
         System.out.println(tsa);
+
+
+        int[]moo={1,2,3,4,5};
+        MinimunSizeSubArraySum ms= new MinimunSizeSubArraySum();
+        int mms=ms.minSubArrayLen2(11,moo);
+        System.out.println(mms);
     }
 }
