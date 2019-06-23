@@ -1,6 +1,12 @@
 package ood.weatherProject;
 
-public class ForecastDisplay {
+public class ForecastDisplay implements Observer{
+    /*
+    public ForecastDisplay(Subject s){
+        s.registerObserver(this);
+    }
+    
+     */
     public void update(double temperature,double humidity,double pressure){
         //update program ...
         System.out.println("Updating forecast");
