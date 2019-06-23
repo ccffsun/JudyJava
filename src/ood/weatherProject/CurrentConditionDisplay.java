@@ -1,7 +1,7 @@
 package ood.weatherProject;
 
 public class CurrentConditionDisplay {
-    public void update(float temperature ,float humidity,float pressure){
+    public void update(double temperature ,double humidity,double pressure){
         System.out.println("Updating current condition");
         System.out.printf(">>>Temperature:%.2f>>>Humidity:%.2f>>>Pressure:%.2f>>>\n", temperature, humidity, pressure);
         display();

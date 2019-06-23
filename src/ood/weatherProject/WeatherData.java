@@ -4,6 +4,9 @@ public class WeatherData {
     private ForecastDisplay forecastDisplay;
     private StatisticsDisplay statisticsDisplay;
     private CurrentConditionDisplay currentConditionDisplay;
+    private double temperature;
+    private double humidity;
+    private double pressure;
 
     public WeatherData() {
         forecastDisplay = new ForecastDisplay();
@@ -11,24 +14,42 @@ public class WeatherData {
         currentConditionDisplay = new CurrentConditionDisplay();
     }
 
-    private float getTemperature() {
-        return (float) 3.14;
+    private void setTemperature(double value){
+        this.temperature = value;
     }
 
-    private float getHumidity() {
-        return (float) 14.15;
+    private double getTemperature() {
+        return this.temperature;
     }
 
-    private float getPressure() {
-        return (float) 60.90;
+    private void setHumidity(double value){
+        this.humidity= value;
+
+    }
+    private double getHumidity() {
+        return this.humidity;
+    }
+
+    private  void setPressure(double value){
+        this.pressure=value;
+    }
+    private double getPressure() {
+        return this.pressure;
     }
 
     public void measurementsChanged() {
-        float temperature = getTemperature();
-        float humidity = getHumidity();
-        float pressure = getPressure();
-        currentConditionDisplay.update(temperature, humidity, pressure);
-        statisticsDisplay.update(temperature, humidity, pressure);
-        forecastDisplay.update(temperature, humidity, pressure);
+        this.temperature = getTemperature();
+        this.humidity = getHumidity();
+        this.pressure = getPressure();
+        this.currentConditionDisplay.update(temperature, humidity, pressure);
+        this.statisticsDisplay.update(temperature, humidity, pressure);
+        this.forecastDisplay.update(temperature, humidity, pressure);
+    }
+
+    public void setMeasurements(double temperature, double humidity, double pressure){
+        setTemperature(temperature);
+        setHumidity(humidity);
+        setPressure(pressure);
+        this.measurementsChanged();
     }
 }
