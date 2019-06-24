@@ -1,4 +1,6 @@
-package ood.weatherProject;
+package ood.weatherProject.subject;
+
+import ood.weatherProject.observer.Observer;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,6 @@
-package ood.weatherProject;
+package ood.weatherProject.subject;
+
+import ood.weatherProject.observer.Observer;
 
 public interface Subject {
     void registerObserver(Observer o);

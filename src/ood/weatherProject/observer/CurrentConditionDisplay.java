@@ -1,4 +1,4 @@
-package ood.weatherProject;
+package ood.weatherProject.observer;
 
 public class CurrentConditionDisplay implements Observer {
     /*

@@ -1,5 +1,10 @@
 package ood.weatherProject;
 
+import ood.weatherProject.observer.CurrentConditionDisplay;
+import ood.weatherProject.observer.ForecastDisplay;
+import ood.weatherProject.observer.StatisticsDisplay;
+import ood.weatherProject.subject.WeatherData;
+
 import java.util.concurrent.TimeUnit;
 
 public class Main {
