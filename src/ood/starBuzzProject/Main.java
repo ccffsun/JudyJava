@@ -24,13 +24,10 @@ public class Main {
 
         b = new Milk(new Milk(new Mocha(new Decaf())));
         printReceipt(b);
-
-
-
     }
 
     public static void printReceipt(Beverage b) {
         System.out.println(b.getDescription());
-        System.out.println(b.cost());
+        System.out.printf("$%.2f\n",b.cost());
     }
 }
