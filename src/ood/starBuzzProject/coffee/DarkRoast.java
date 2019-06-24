@@ -1,4 +1,6 @@
-package ood.starBuzzProject;
+package ood.starBuzzProject.coffee;
+
+import ood.starBuzzProject.Beverage;
 
 public class DarkRoast extends Beverage {
     public DarkRoast(){
@@ -6,6 +8,6 @@ public class DarkRoast extends Beverage {
     }
     @Override
     public double cost() {
-        return 0.99+super.cost();
+        return 0.99;
     }
 }

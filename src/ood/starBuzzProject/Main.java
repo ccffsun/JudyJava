@@ -1,22 +1,31 @@
 package ood.starBuzzProject;
 
+import ood.starBuzzProject.coffee.DarkRoast;
+import ood.starBuzzProject.coffee.Decaf;
+import ood.starBuzzProject.coffee.Espresso;
+import ood.starBuzzProject.coffee.HouseBlend;
+import ood.starBuzzProject.condimentDecorator.Milk;
+import ood.starBuzzProject.condimentDecorator.Mocha;
+import ood.starBuzzProject.condimentDecorator.Soy;
+import ood.starBuzzProject.condimentDecorator.Whip;
+
 public class Main {
     public static void main(String[] args) {
         Beverage b = new HouseBlend();
-        printReceipt(b);
-        b.setMilk();
-        printReceipt(b);
-        b.setMocha();
+        b=new Milk(b);
+        b=new Mocha(b);
         printReceipt(b);
 
-        /*b = new Espresso();
-        printReceipt(b);
-        b = new DarkRoast();
-        printReceipt(b);
-        b = new Decaf();
+        b = new Whip(new Mocha(new Espresso()));
         printReceipt(b);
 
-         */
+        b = new Soy(new Mocha(new Milk(new DarkRoast())));
+        printReceipt(b);
+
+        b = new Milk(new Milk(new Mocha(new Decaf())));
+        printReceipt(b);
+
+
 
     }
 

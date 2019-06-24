@@ -1,4 +1,6 @@
-package ood.starBuzzProject;
+package ood.starBuzzProject.coffee;
+
+import ood.starBuzzProject.Beverage;
 
 public class Espresso extends Beverage {
     public Espresso(){
@@ -6,6 +8,6 @@ public class Espresso extends Beverage {
     }
     @Override
     public double cost() {
-        return 1.99+super.cost();
+        return 1.99;
     }
 }

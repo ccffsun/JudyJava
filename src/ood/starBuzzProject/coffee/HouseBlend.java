@@ -1,4 +1,6 @@
-package ood.starBuzzProject;
+package ood.starBuzzProject.coffee;
+
+import ood.starBuzzProject.Beverage;
 
 public class HouseBlend extends Beverage {
     public HouseBlend(){
@@ -8,6 +10,6 @@ public class HouseBlend extends Beverage {
 
     @Override
     public double cost() {
-        return 0.89+super.cost();
+        return 0.89;
     }
 }
