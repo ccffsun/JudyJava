@@ -120,7 +120,7 @@ public class Main {
 
         int[]moo={1,2,3,4,5};
         MinimunSizeSubArraySum ms= new MinimunSizeSubArraySum();
-        int mms=ms.minSubArrayLen2(11,moo);
+        int mms=ms.minSubArrayLen(11,moo);
         System.out.println(mms);
     }
 }
