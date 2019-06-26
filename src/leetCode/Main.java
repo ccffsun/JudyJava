@@ -122,5 +122,9 @@ public class Main {
         MinimunSizeSubArraySum ms= new MinimunSizeSubArraySum();
         int mms=ms.minSubArrayLen(11,moo);
         System.out.println(mms);
+        LongestSubStringWithoutRepeatingCharacters lssw=new LongestSubStringWithoutRepeatingCharacters();
+        int l=lssw.lengthOfLongestSubstring("");
+        System.out.println(l);
+
     }
 }
