@@ -125,6 +125,8 @@ public class Main {
         LongestSubStringWithoutRepeatingCharacters lssw=new LongestSubStringWithoutRepeatingCharacters();
         int l=lssw.lengthOfLongestSubstring("");
         System.out.println(l);
-
+        MinimunWindowSubstring mws=new MinimunWindowSubstring();
+        String c=mws.minWindow("cabwefgewcwaefgcf" ,"cae");
+        System.out.println(c);
     }
 }
