@@ -1,4 +1,4 @@
-package ood.pizzaProject;
+package ood.pizzaProject.pizza;
 
 public class CheesePizza extends Pizza{
     public CheesePizza(){

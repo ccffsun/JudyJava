@@ -1,7 +1,10 @@
-package ood.pizzaProject;
+package ood.pizzaProject.pizza;
 
 public class Pizza {
-    String description;
+    protected String description;
+    public String getDescription(){
+        return this.description;
+    }
     public void prepare(){
         System.out.println( "Preparing... "+description);
     }
@@ -9,7 +12,6 @@ public class Pizza {
         System.out.println("Baking... "+description);
     }
     public void cut(){
-
         System.out.println("Cutting... "+description);
     }
     public void box(){
