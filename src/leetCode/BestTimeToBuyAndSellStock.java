@@ -17,6 +17,7 @@ package leetCode;
 //Output: 0
 //Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
+//one transaction
 public class BestTimeToBuyAndSellStock {
     public int maxProfit(int[] prices) {
         if(prices.length==0) return 0;
