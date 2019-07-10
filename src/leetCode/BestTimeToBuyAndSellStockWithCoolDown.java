@@ -13,6 +13,21 @@ package leetCode;
 
 public class BestTimeToBuyAndSellStockWithCoolDown {
     public int maxProfit(int[] prices) {
-
+    int n=prices.length;
+    int i;//0->n-1
+    int k;//0,1  k=0 means can not do the transaction,k=1 means can do the transaction
+     //new hold and unhold
+     int[][]hold=new int[n][2];
+     int[][]unhold=new int[n][2];
+     //initial
+        hold[0][1]=-prices[0];
+        unhold[0][1]=0;
+        //
+        for(i=1;i<n;i++){
+            k=1;
+            hold[i][k]=Math.max(hold[i-1][1],unhold[i-1][1]-prices[i]);
+            unhold[i][k]=Math.max(hold[i-1][1]+prices[i],unhold[i-1][1]);
+        }
+        return Math.max(hold[n-1][1],unhold[n-1][1]);
     }
 }
