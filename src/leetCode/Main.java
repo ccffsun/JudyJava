@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String [] args){
-        System.out.println("Hello world !");
+       /* System.out.println("Hello world !");
         RemoveDuplicatesFromSortedArray test = new RemoveDuplicatesFromSortedArray();
         int [] a={1,1,2,3,3,5,7,8,8,9};
         int u=test.removeDuplicates(a);
@@ -88,7 +88,8 @@ public class Main {
  * int param_3 = obj.peek();
  * boolean param_4 = obj.empty();
  */
-        ImplementQueueUsingStack myQueue =new ImplementQueueUsingStack();
+
+       /*ImplementQueueUsingStack myQueue =new ImplementQueueUsingStack();
         myQueue.MyQueue();
         myQueue.push(3);
         myQueue.push(2);
@@ -104,7 +105,7 @@ public class Main {
         testStack.push(1);
          */
 
-        Hannoi h = new Hannoi();
+        /*Hannoi h = new Hannoi();
         h.move(3,"A","B","C");
 
         MaxSumOfNoAdjectElement maxsum= new  MaxSumOfNoAdjectElement();
@@ -118,7 +119,7 @@ public class Main {
         System.out.println(tsa);
 
 
-        int[]moo={4,5,8,2};
+        int[]moo={4,6,-1,3,8,5,-11};
         MinimunSizeSubArraySum ms= new MinimunSizeSubArraySum();
         int mms=ms.minSubArrayLen(11,moo);
         System.out.println(mms);
@@ -128,8 +129,17 @@ public class Main {
         MinimunWindowSubstring mws=new MinimunWindowSubstring();
         String c=mws.minWindow("cabwefgewcwaefgcf" ,"cae");
         System.out.println(c);
-        KthLargestElementInAStream kth=new KthLargestElementInAStream(3,moo);
-        int kmin=kth.add(10);
-        System.out.println(kmin);
+        */
+        int[]moo={4,6,-1,3,8,5,-11};
+        KthLargest kth= new KthLargest(4,moo);
+        System.out.println("\n+*");
+        int k1=kth.add(100);
+        int k2=kth.add(50);
+        int k3=kth.add(7);
+        int k4=kth.add(-2);
+        System.out.println(k1);
+        System.out.println(k2);
+        System.out.println(k3);
+        System.out.println(k4);
     }
 }
