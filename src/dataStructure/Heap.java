@@ -12,11 +12,11 @@ public class Heap {
         int c2=2*i+2;
         int max=i;
         //c1,c2,i which is the max
-        if(c1>max&&c1<n){
-            max=c1;
+        if(tree[c1]>tree[max]&&c1<n){
+            tree[max]=tree[c1];
         }
-        if(c2>max&&c2<n){
-            max=c2;
+        if(tree[c2]>tree[max]&&c2<n){
+            tree[max]=tree[c2];
         }
         //swap max and i
         if(i!=max){

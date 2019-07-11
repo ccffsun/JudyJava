@@ -22,6 +22,8 @@ public class KthLargestElementInAStream {
         length=nums.length;
     }
     public int add(int val) {
+        //what if num.length==0??
+        //use priorityQueue
         /*if(length==0){
             minArray=new int[n];
             minArray[0]=val;
@@ -62,6 +64,7 @@ public class KthLargestElementInAStream {
          heapifyMin(tree,n,i);
      }
     }
+
 }
 
 /**
