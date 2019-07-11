@@ -118,7 +118,7 @@ public class Main {
         System.out.println(tsa);
 
 
-        int[]moo={1,2,3,4,5};
+        int[]moo={4,5,8,2};
         MinimunSizeSubArraySum ms= new MinimunSizeSubArraySum();
         int mms=ms.minSubArrayLen(11,moo);
         System.out.println(mms);
@@ -128,5 +128,8 @@ public class Main {
         MinimunWindowSubstring mws=new MinimunWindowSubstring();
         String c=mws.minWindow("cabwefgewcwaefgcf" ,"cae");
         System.out.println(c);
+        KthLargestElementInAStream kth=new KthLargestElementInAStream(3,moo);
+        int kmin=kth.add(10);
+        System.out.println(kmin);
     }
 }
