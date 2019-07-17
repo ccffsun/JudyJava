@@ -141,5 +141,11 @@ public class Main {
         System.out.println(k2);
         System.out.println(k3);
         System.out.println(k4);
+
+        String preordertree ="1-2--3--4-5--6--7";
+        RecoverATreeFormPreorderTraversal rt=new RecoverATreeFormPreorderTraversal();
+        TreeNode root  =rt.recoverFromPreorder(preordertree);
+        System.out.println(root.val+" "+root.left.val+" "+root.right.val);
+
     }
 }
