@@ -38,5 +38,39 @@ public class DataStructureMain {
         tree.postOrder(treeNode1);
         System.out.println("***********");
         tree.breadthDeepOrder(treeNode1);
+        NullTest nt=new NullTest();
+        nt.size();
+
+        //BFS
+        Graph g = new Graph(4);
+        g.addEdge(0, 1);
+        g.addEdge(0, 2);
+        g.addEdge(1, 2);
+        g.addEdge(2, 0);
+        g.addEdge(2, 3);
+        g.addEdge(3, 3);
+
+        System.out.println("Following is Breadth First Traversal "+
+                "(starting from vertex 2)");
+
+        g.BFS(2);
+
+        //dfs
+
+        Graph2 h = new Graph2(4);
+        h.addEdge(0, 1);
+        h.addEdge(0, 2);
+        h.addEdge(1, 2);
+        h.addEdge(2, 0);
+        h.addEdge(2, 3);
+        h.addEdge(3, 3);
+
+        System.out.println("Following is Depth First Traversal "+
+                "(starting from vertex 2)");
+
+        h.DFS(2);
+
     }
 }
+
+

@@ -39,7 +39,7 @@ import java.util.*;
 
             // Mark the current node as visited and enqueue it
             visited[s]=true;
-            stack.add(s);
+            stack.push(s);
 
             while (stack.size() != 0)
             {
@@ -57,7 +57,7 @@ import java.util.*;
                     if (!visited[n])
                     {
                         visited[n] = true;
-                        stack.add(n);
+                        stack.push(n);
                     }
                 }
             }
