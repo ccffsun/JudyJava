@@ -54,6 +54,7 @@ public class RecoverATreeFormPreorderTraversal {
 
         //Hashmap  :levels (curLevel,curNode)
         public TreeNode recoverFromPreorder(String S) {
+
             Map<Integer, TreeNode> levels = new HashMap<>();
             int i = 0;
             while(i < S.length()) {
@@ -76,6 +77,38 @@ public class RecoverATreeFormPreorderTraversal {
             }
             return levels.get(0);
         }
+
+
+        public TreeNode recoverFromPreOrderII(String s){
+            int level=0;
+            int val=0;
+            Stack<TreeNode> stack =new Stack<>();
+             for(int i=0;i<s.length();){
+
+                 for(level=0; i<s.length()&&s.charAt(i)=='-';i++){
+                     level++;
+                 }
+                 for(val=0;i<s.length()&&s.charAt(i)!='-';i++){
+                     val=val*10+(s.charAt(i)-'0');
+                 }
+             }
+             while(stack.size()>level){//带表现在的Node与peek是同一深度的节点，size和level一致时代表两个节点是父子关系
+               stack.pop();
+             }
+             TreeNode node=new TreeNode(val);
+             if(stack.size()!=0) {
+                 TreeNode peek = stack.peek();
+                 if (peek.left != null) {
+                     peek.left = node;
+                 } else peek.right = node;
+                 stack.add(node);
+             }
+            while(stack.size()>1) {  //输出最后一个节点 根节点
+                stack.pop();
+            }
+            return stack.pop();
+        }
+
     }
 
 
