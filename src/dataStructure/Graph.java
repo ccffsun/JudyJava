@@ -26,7 +26,7 @@ public class Graph {
         queue.add(s);
         while (queue.size()!=0){
             s=queue.poll();
-            System.out.println(s+ " ");
+            System.out.print(s+ " ");
             ListIterator<Integer> i= adj[s].listIterator();
             while(i.hasNext()){
                 int n=i.next();

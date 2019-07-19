@@ -70,6 +70,9 @@ public class DataStructureMain {
 
         h.DFS(2);
 
+        System.out.println("************");
+        BinaryTreeBFS bfs =new BinaryTreeBFS();
+        bfs.btBFS(treeNode1);
     }
 }
 
