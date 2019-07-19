@@ -18,7 +18,16 @@ public class BinaryTreeDFS {
             if(peek.right!=null){
                 stack.add(peek.right);
             }
-
+        }
+    }
+    public void btDFSRECUR(TreeNode root){
+        if(root==null) return;
+        System.out.print(root.val+" ");
+        if(root.left!=null){
+            btDFSRECUR(root.left);
+        }
+        if(root.right!=null){
+            btDFSRECUR((root.right));
         }
     }
 }

@@ -76,7 +76,8 @@ public class DataStructureMain {
         System.out.println();
         BinaryTreeDFS dfs=new BinaryTreeDFS();
         dfs.btDFS(treeNode1);
-
+        System.out.println();
+        dfs.btDFSRECUR(treeNode1);
     }
 }
 
