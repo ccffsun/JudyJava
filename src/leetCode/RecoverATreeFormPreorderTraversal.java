@@ -78,7 +78,7 @@ public class RecoverATreeFormPreorderTraversal {
             return levels.get(0);
         }
 
-
+        //stack
         public TreeNode recoverFromPreOrderII(String s) {
             int level = 0;
             int val = 0;
@@ -91,7 +91,7 @@ public class RecoverATreeFormPreorderTraversal {
                 for (val = 0; i < s.length() && s.charAt(i) != '-'; i++) {
                     val = val * 10 + (s.charAt(i) - '0');
                 }
-                while (stack.size() > level) {//带表现在的Node与peek是同一深度的节点，size和level一致时代表两个节点是父子关系
+                while (stack.size() > level) {//代表现在的Node与peek是同一深度的节点，size和level一致时代表两个节点是父子关系
                     stack.pop();
                 }
                 TreeNode node = new TreeNode(val);
