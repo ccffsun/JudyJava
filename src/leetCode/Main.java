@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String [] args){
-       /* System.out.println("Hello world !");
+        System.out.println("Hello world !");
         RemoveDuplicatesFromSortedArray test = new RemoveDuplicatesFromSortedArray();
         int [] a={1,1,2,3,3,5,7,8,8,9};
         int u=test.removeDuplicates(a);
@@ -31,21 +31,25 @@ public class Main {
 
         //Add two Numbers
         AddTwoNums atn = new AddTwoNums();
-        ListNode m = new ListNode(2);
-        ListNode m2 = new ListNode(5);
-        ListNode m3 = new ListNode(7);
-        ListNode m4 = new ListNode(9);
+        ListNode m = new ListNode(1);
+        ListNode m2 = new ListNode(2);
+        ListNode m3 = new ListNode(3);
+        ListNode m4 = new ListNode(4);
         m.next=m2;
         m2.next=m3;
         m3.next=m4;
 
-        ListNode n = new ListNode(4);
-        ListNode n2 = new ListNode(6);
-        ListNode n3 = new ListNode(7);
-        ListNode n4 = new ListNode(9);
+        ListNode n = new ListNode(1);
+        ListNode n2 = new ListNode(2);
+        ListNode n3 = new ListNode(3);
+        ListNode n4 = new ListNode(4);
+        ListNode n5= new ListNode(5);
+        ListNode n6=new ListNode(6);
         n.next=n2;
         n2.next=n3;
         n3.next=n4;
+        n4.next=n5;
+        n5.next=n6;
         ListNode output = atn.addTwoNumbers(m,n);
         System.out.println(output.val);
 
@@ -146,6 +150,19 @@ public class Main {
         RecoverATreeFormPreorderTraversal rt=new RecoverATreeFormPreorderTraversal();
         TreeNode root  =rt.recoverFromPreorder(preordertree);
         System.out.println(root.val+" "+root.left.val+" "+root.right.val);
+        ReverseList rs= new ReverseList();
+        /*ListNode e=rs.reverseList(n);
+        while(e!=null) {
+            System.out.println(e.val);
+            e = e.next;
+        }
 
+         */
+        ReverseLinkedListII rs2=new ReverseLinkedListII();
+        ListNode f=rs2.reverseBetween(n,2,4);
+        while(f!=null){
+            System.out.println(f.val);
+            f=f.next;
+        }
     }
 }
