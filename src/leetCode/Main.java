@@ -7,6 +7,7 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String [] args){
+       /*
         System.out.println("Hello world !");
         RemoveDuplicatesFromSortedArray test = new RemoveDuplicatesFromSortedArray();
         int [] a={1,1,2,3,3,5,7,8,8,9};
@@ -134,6 +135,8 @@ public class Main {
         String c=mws.minWindow("cabwefgewcwaefgcf" ,"cae");
         System.out.println(c);
         */
+
+       /*
         int[]moo={4,6,-1,3,8,5,-11};
         KthLargest kth= new KthLargest(4,moo);
         System.out.println("\n+*");
@@ -151,6 +154,7 @@ public class Main {
         TreeNode root  =rt.recoverFromPreorder(preordertree);
         System.out.println(root.val+" "+root.left.val+" "+root.right.val);
         ReverseList rs= new ReverseList();
+        */
         /*ListNode e=rs.reverseList(n);
         while(e!=null) {
             System.out.println(e.val);
@@ -158,11 +162,30 @@ public class Main {
         }
 
          */
-        ReverseLinkedListII rs2=new ReverseLinkedListII();
+       /* ReverseLinkedListII rs2=new ReverseLinkedListII();
         ListNode f=rs2.reverseBetween(n,2,4);
         while(f!=null){
             System.out.println(f.val);
             f=f.next;
+        }
+
+        */
+        ListNode n = new ListNode(1);
+        ListNode n2 = new ListNode(3);
+        ListNode n3 = new ListNode(2);
+        ListNode n4 = new ListNode(0);
+        ListNode n5= new ListNode(6);
+        ListNode n6=new ListNode(5);
+        n.next=n2;
+        n2.next=n3;
+        n3.next=n4;
+        n4.next=n5;
+        n5.next=n6;
+        PartitionList pl=new PartitionList();
+        ListNode partition=pl.partition(n,3);
+        while (partition!=null) {
+            System.out.println(partition.val);
+            partition = partition.next;
         }
     }
 }
