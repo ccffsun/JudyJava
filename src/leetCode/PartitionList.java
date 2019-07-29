@@ -6,7 +6,7 @@ public class PartitionList {
      dummy.next=head;
      ListNode prev=dummy;
      ListNode curr=head;
-     while(curr!=null &&curr.val<x){ 
+     while(curr!=null &&curr.val<x){
          prev=prev.next;
          curr=curr.next;
      }
@@ -26,7 +26,7 @@ public class PartitionList {
          body=body.next;
      }
      less.next=curr;
-    greater.next=null;
+     greater.next=null;
      return dummy.next;
     }
 }

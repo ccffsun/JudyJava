@@ -171,21 +171,30 @@ public class Main {
 
         */
         ListNode n = new ListNode(1);
-        ListNode n2 = new ListNode(3);
-        ListNode n3 = new ListNode(2);
-        ListNode n4 = new ListNode(0);
-        ListNode n5= new ListNode(6);
-        ListNode n6=new ListNode(5);
+        ListNode n2 = new ListNode(2);
+        ListNode n3 = new ListNode(3);
+        ListNode n4 = new ListNode(3);
+        ListNode n5= new ListNode(4);
+        ListNode n6=new ListNode(4);
+        ListNode n7=new ListNode(5);
         n.next=n2;
         n2.next=n3;
         n3.next=n4;
         n4.next=n5;
         n5.next=n6;
-        PartitionList pl=new PartitionList();
+        n6.next=n7;
+        /*PartitionList pl=new PartitionList();
         ListNode partition=pl.partition(n,3);
         while (partition!=null) {
             System.out.println(partition.val);
             partition = partition.next;
+
+         */
+        RemoveDuplicatesFromSortedListII rsl=new RemoveDuplicatesFromSortedListII();
+        ListNode dd=rsl.deleteDuplicates(n);
+        while (dd!=null){
+            System.out.println(dd.val);
+            dd=dd.next;
         }
     }
 }
