@@ -170,19 +170,19 @@ public class Main {
         }
 
         */
-        ListNode n = new ListNode(1);
+        ListNode n = new ListNode(4);
         ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
+        ListNode n3 = new ListNode(1);
         ListNode n4 = new ListNode(3);
-        ListNode n5= new ListNode(4);
-        ListNode n6=new ListNode(4);
-        ListNode n7=new ListNode(5);
+        ListNode n5= new ListNode(0);
+        ListNode n6=new ListNode(-1);
+        ListNode n7=new ListNode(10);
         n.next=n2;
         n2.next=n3;
         n3.next=n4;
-        n4.next=n5;
-        n5.next=n6;
-        n6.next=n7;
+        //n4.next=n5;
+        //n5.next=n6;
+        //n6.next=n7;
         /*PartitionList pl=new PartitionList();
         ListNode partition=pl.partition(n,3);
         while (partition!=null) {
@@ -190,11 +190,21 @@ public class Main {
             partition = partition.next;
 
          */
-        RemoveDuplicatesFromSortedListII rsl=new RemoveDuplicatesFromSortedListII();
+        /*RemoveDuplicatesFromSortedListII rsl=new RemoveDuplicatesFromSortedListII();
         ListNode dd=rsl.deleteDuplicates(n);
         while (dd!=null){
             System.out.println(dd.val);
             dd=dd.next;
         }
+
+         */
+
+        InsertionSortList insert=new InsertionSortList();
+        ListNode ans=insert.insertionSortList(n);
+        while(ans!=null){
+            System.out.println(ans.val);
+            ans=ans.next;
+        }
+
     }
 }
