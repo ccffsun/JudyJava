@@ -78,6 +78,11 @@ public class DataStructureMain {
         dfs.btDFS(treeNode1);
         System.out.println();
         dfs.btDFSRECUR(treeNode1);
+
+
+        System.out.println("***********");
+        MyHashSet mhs= new MyHashSet();
+        mhs.hashSet();
     }
 }
 

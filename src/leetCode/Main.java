@@ -205,6 +205,19 @@ public class Main {
             System.out.println(ans.val);
             ans=ans.next;
         }
+        System.out.println("###############");
+        ListNode r = new ListNode(0);
+        ListNode r2 = new ListNode(1);
+        ListNode r3 = new ListNode(2);
+        ListNode r4 = new ListNode(3);
+        r.next=r2;
+        r2.next=r3;
+        r3.next=r4;
+        int[] g={0,1,3};
+
+        LinkedListComponents lc=new LinkedListComponents();
+        int number =lc.numComponents(r,g);
+        System.out.println(number);
 
     }
 }
