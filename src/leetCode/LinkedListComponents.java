@@ -1,8 +1,6 @@
 package leetCode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class LinkedListComponents {
     public int numComponents(ListNode head, int[] G) {
@@ -26,6 +24,35 @@ public class LinkedListComponents {
             if (curr != null) {
                 curr = curr.next;
             }
+        }
+        return number;
+    }
+
+    public int numComponentsII(ListNode head, int[] G) {
+        Set<Integer> gSet =new HashSet<>();
+        for(int i:G) {
+            gSet.add(i);
+        }
+        int number=0;
+        while(head!=null){
+            if (gSet.contains(head.val)&&(head.next==null||!gSet.contains(head.next.val))){
+              number++;
+            }
+            head=head.next;
+        }
+        return number;
+    }
+    public int numComponentsIII(ListNode head, int []G){
+        boolean [] vis=new boolean[10000];
+        for(int i:G){
+            vis[i]=true;
+        }
+        int number=0;
+        while(head!=null){
+            if(vis[head.val]&&((head.next==null)||!vis[head.next.val])){
+              number++;
+            }
+            head=head.next;
         }
         return number;
     }
