@@ -1,6 +1,6 @@
 package leetCode;
 
-import static jdk.nashorn.internal.objects.ArrayBufferView.length;
+
 
 public class IntersectionOfTwoLinkedList {
     //recursive
@@ -46,7 +46,7 @@ public class IntersectionOfTwoLinkedList {
             }
             else return headA;
     }
-    /* the method of length()
+    // the method of length()
     private int length(ListNode node) {
         int length = 0;
         while (node != null) {
@@ -56,5 +56,15 @@ public class IntersectionOfTwoLinkedList {
         return length;
     }
 
-     */
+
+    public ListNode getIntersectionNodeII(ListNode headA, ListNode headB){
+        if(headA==null||headB==null) return null;
+        ListNode a=headA;
+        ListNode b=headB;
+        while (a!=b){
+            a=a==null? headB:a.next;
+            b=b==null? headA:b.next;
+        }
+        return a;
+    }
 }
