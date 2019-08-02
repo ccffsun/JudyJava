@@ -18,20 +18,38 @@ package leetCode;
 //The first element output[0] has output[0].val = 1, output[0].next = null.
 //The last element output[4] is null, but it's string representation as a ListNode is [].
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class SplitLinkedListInParts {
     public ListNode[] splitListToParts(ListNode root, int k) {
+        ListNode [] wrap=new ListNode[k];
         int l = length(root);
-        int q = l / k;//quotient (0,1,2,3....)
         int r = l % k;//reminder(0,1,2...k-1)
-        int i = 0;
+        int index=0;
+        ListNode dummy=new ListNode(0);
         //if q=0,there are k lists,l not null,have only one ListNode,k-l null
         //if q>0,there are k lists,there are r lists have q+1 ListNodes ,the rest have q ListNodes
-        while (root != null) {
-            i=root.val;
-            ListNode node = new ListNode(i);
+        for(int i=0;i<k;i++){
+            dummy.next=root;
+            if(root!=null) {
+                ListNode temp = root.next;
+                int n = r > 0 ? 0 : -1;
+                int looptime = l / k + n;
+                while (looptime > 0) {
+                    temp = temp.next;
+                    root = root.next;
+                    looptime--;
+                }
+                r--;
+                root.next = null;
+                root = temp;
+            }
+            wrap[index] = dummy.next;
+            index++;
 
-            root=root.next;
         }
+        return wrap;
     }
     private int length(ListNode node) {
         int length = 0;
