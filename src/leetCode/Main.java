@@ -215,18 +215,54 @@ public class Main {
         r3.next=r4;
         int[] g={0,1,3};
 
+        ListNode v = new ListNode(5);
+        ListNode v2 = new ListNode(6);
+        ListNode v3 = new ListNode(7);
+        ListNode v4 = new ListNode(9);
+        v.next=v2;
+        v2.next=v3;
+        v3.next=v4;
+
+        ListNode w=null;
+
+        ListNode u = new ListNode(-1);
+        ListNode u2 = new ListNode(12);
+        ListNode u3 = new ListNode(20);
+        ListNode u4 = new ListNode(100);
+        u.next=u2;
+        u2.next=u3;
+        u3.next=u4;
+
+        ListNode y=null;
+
+        ListNode [] abs=new ListNode[5];
+        abs[0]=w;
+        abs[1]=r;
+        abs[2]=v;
+        abs[3]=y;
+        abs[4]=u;
+
+
        /*
         LinkedListComponents lc=new LinkedListComponents();
         int number =lc.numComponents(r,g);
         System.out.println(number);
        */
 
-
+        /*
         RotateList rl=new RotateList();
         ListNode rotate=rl.rotateRightII(r,2000000);
         while(rotate!=null){
             System.out.println(rotate.val);
             rotate=rotate.next;
+        }
+
+         */
+        MergeKSortedLists mkl= new MergeKSortedLists();
+        ListNode newMkl= mkl.mergeKLists(abs);
+        while(newMkl!=null){
+            System.out.println(newMkl.val);
+            newMkl=newMkl.next;
         }
     }
 }
