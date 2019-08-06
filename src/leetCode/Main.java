@@ -215,9 +215,18 @@ public class Main {
         r3.next=r4;
         int[] g={0,1,3};
 
+       /*
         LinkedListComponents lc=new LinkedListComponents();
         int number =lc.numComponents(r,g);
         System.out.println(number);
+       */
 
+
+        RotateList rl=new RotateList();
+        ListNode rotate=rl.rotateRightII(r,2000000);
+        while(rotate!=null){
+            System.out.println(rotate.val);
+            rotate=rotate.next;
+        }
     }
 }

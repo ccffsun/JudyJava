@@ -25,6 +25,7 @@ public class CopyListWithRandomPointer {
         return dummy;
     }
 
+    /*
     public Node copyRandomListII(Node head){
         Node curr=head;
 
@@ -47,4 +48,6 @@ public class CopyListWithRandomPointer {
         curr=head;
         Node dummy=new Node(0);
     }
+
+     */
 }
