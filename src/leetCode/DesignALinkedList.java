@@ -11,9 +11,9 @@ public class DesignALinkedList {
 
     }
 
-    node currHead;
-    node currTail;
-    int size;
+    private node currHead;
+    private node currTail;
+    private int size;
 
     /**
      * Initialize your data structure here.
@@ -29,11 +29,10 @@ public class DesignALinkedList {
      * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
      */
     public int get(int index) {
-        if (index > size) return -1;
+        if (index >= size) return -1;
         node walker = currHead;
-        while (walker != null && index > 1) {
+        for (int i = 0; i < index; i++) {
             walker = walker.next;
-            index--;
         }
         return walker.val;
     }
@@ -60,7 +59,6 @@ public class DesignALinkedList {
 
         } else {
             currHead = newTail;
-            currTail = currHead;
         }
         currTail = newTail;
         size++;
@@ -73,6 +71,11 @@ public class DesignALinkedList {
             addAtTail(val);
             return;
         }
+        if (index == 0) {
+            addAtHead(val);
+            return;
+        }
+
         node insert = new node(val);
         node curr = currHead;
         for (int i = 0; i < index - 1; i++) {
@@ -88,23 +91,38 @@ public class DesignALinkedList {
      * Delete the index-th node in the linked list, if the index is valid.
      */
     public void deleteAtIndex(int index) {
-        if (index > size) return;
-        node dele = currHead;
-        if (index == 1) {
-            currHead = currHead.next;
+        if (size == 0) return;
+        if (index >= size) return;
 
-        } else {
-            for (int i = 0; i < index - 1; i++) {
-                dele = dele.next;
+        if (index == 0) {
+            if (size == 1) {
+                size = 0;
+                currHead = null;
+                currTail = null;
+                return;
             }
-            node temp = dele.next.next;
-            dele.next = temp;
-            if (temp == null) {
-                currTail = dele;
-            }
+            currHead = currHead.next;
+            size--;
+            return;
         }
-        size--;
+
+
+            node curr = currHead;
+            for (int i = 0; i < index - 1; i++) {
+                curr = curr.next;
+            }
+            if (index == size - 1) {
+                currTail = curr;
+                currTail.next = null;
+                size--;
+                return;
+            }
+            node temp = curr.next;
+            curr.next = temp.next;
+
+            size--;
     }
+}
 
 /**
  * Your MyLinkedList object will be instantiated and called as such:
@@ -115,4 +133,4 @@ public class DesignALinkedList {
  * obj.addAtIndex(index,val);
  * obj.deleteAtIndex(index);
  */
-}
+
