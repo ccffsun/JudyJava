@@ -1,4 +1,7 @@
 package leetCode;
+
+import java.util.Stack;
+
 /* Reverse a linked list from position m to n. Do it in one-pass.
 
             Note: 1 ≤ m ≤ n ≤ length of list.
@@ -31,6 +34,29 @@ public class ReverseLinkedListII {
         }
         out.next=curr;
         f.next=prev;
+        return dummy.next;
+    }
+
+    public  ListNode reverseBetweenII(ListNode head, int m ,int n){
+        ListNode dummy =new ListNode(0);
+        dummy.next=head;
+        ListNode prev=dummy;
+        Stack<ListNode> stack=new Stack<>();
+        for(int i=0;i<m-1;i++){
+            prev=prev.next;
+        }
+        ListNode curr=prev.next;
+        for(int i=0;i<=n-m;i++){
+            stack.push(curr);
+            curr=curr.next;
+        }
+
+        while(stack.size()>0){
+            ListNode pop=stack.pop();
+            prev.next=pop;
+            prev=pop;
+        }
+        prev.next=curr;
         return dummy.next;
     }
 
