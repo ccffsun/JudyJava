@@ -60,4 +60,26 @@ public class ReverseLinkedListII {
         return dummy.next;
     }
 
+    public ListNode reverseBetweenI(ListNode head, int m, int n){
+        ListNode dummy=new ListNode(0);
+        dummy.next=head;
+        ListNode prev=dummy;
+        if(m>1){
+            for(int i=0;i<m-1;i++){
+              prev=prev.next;
+            }
+        }
+        ListNode curr=prev.next,out=curr;
+        ListNode end=null;
+        for(int i=0;i<n-m+1;i++){
+            ListNode temp=curr.next;
+            curr.next=end;
+            end=curr;
+            curr=temp;
+        }
+        out.next=curr;
+        prev.next=end;
+        return  dummy.next;
+    }
+
 }
