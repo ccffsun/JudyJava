@@ -22,21 +22,21 @@ public class InsertionSortList {
         return dummy.next;
     }
 
-    public ListNode insertSortListII(ListNode head) {
+
+public ListNode insertSortListII(ListNode head) {
         if (head == null || head.next == null) return head;
         ListNode dummy = new ListNode(0);
         //ListNode prev = dummy;
         dummy.next = head;
         ListNode curr = dummy.next;
-        ListNode temp = curr.next;
         while (curr.next != null) {
-
+                ListNode temp=curr.next;
             if ( temp.val>=curr.val) {
                 curr = curr.next;
             } else {
                 curr.next = temp.next;
                 ListNode prev = dummy;
-                while (temp.val > prev.next.val) {
+                while (prev.next!=null&&temp.val > prev.next.val) {
                     prev = prev.next;
                 }
                 temp.next = prev.next;
