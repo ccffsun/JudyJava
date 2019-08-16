@@ -1,6 +1,6 @@
 package leetCode;
 
-public class Node {
+public class Node { //randomly linked list
         public int val;
         public Node next;
         public Node random;
