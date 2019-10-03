@@ -264,5 +264,9 @@ public class Main {
             System.out.println(newMkl.val);
             newMkl=newMkl.next;
         }
+
+        PalindromeNumber p=new PalindromeNumber();
+        boolean boo=p.isPalindrome(67);
+        System.out.println(boo);
     }
 }
