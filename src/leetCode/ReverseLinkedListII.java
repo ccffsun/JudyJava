@@ -82,4 +82,33 @@ public class ReverseLinkedListII {
         return  dummy.next;
     }
 
+    public ListNode reverseMN(ListNode head, int m, int n){
+        if(head==null) return null;
+        if(head.next==null) return head;
+        //1. count the m and n to position the slow and fast
+        int x=n-m;
+        ListNode dummy=new ListNode(0);//when m=1, m is the position of first ListNode, use dummy head to
+        dummy.next=head;
+        ListNode prev=dummy;
+        while(m>1){
+            prev=prev.next;
+            m--;
+        }
+        ListNode slow=prev.next;//slow can be null
+        ListNode fast=slow;
+        int f=x;
+        while(fast!=null&&f>0){
+            fast=fast.next;
+            f--;
+        }
+        for(int i=x;i>0&& fast!=null;i--){
+            ListNode temp1=slow.next;
+            ListNode temp2=fast.next;
+            fast.next=slow;
+            slow.next=temp2;
+            slow=temp1;
+        }
+        prev.next=fast;
+        return dummy.next;
+    }
 }
