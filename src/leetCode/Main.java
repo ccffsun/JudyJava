@@ -257,7 +257,7 @@ public class Main {
             rotate=rotate.next;
         }
 
-         */
+
         MergeKSortedLists mkl= new MergeKSortedLists();
         ListNode newMkl= mkl.mergeKLists(abs);
         while(newMkl!=null){
@@ -268,5 +268,10 @@ public class Main {
         PalindromeNumber p=new PalindromeNumber();
         boolean boo=p.isPalindrome(67);
         System.out.println(boo);
+        */
+
+
+        Hannoi h=new Hannoi();
+        h.move(3, "a","b","c");
     }
 }
