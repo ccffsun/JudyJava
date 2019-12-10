@@ -28,7 +28,7 @@ public class ReverseList {
         3 ->   2 ->   null
         temp   head
 
-        
+
         reverseRest=5->4->3->2->null
 
          */
