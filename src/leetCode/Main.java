@@ -268,10 +268,16 @@ public class Main {
         PalindromeNumber p=new PalindromeNumber();
         boolean boo=p.isPalindrome(67);
         System.out.println(boo);
-        */
+
 
 
         Hannoi h=new Hannoi();
         h.move(3, "a","b","c");
+
+
+         */
+        SearchA2DMatrixII s=new SearchA2DMatrixII();
+        int [][]matrix={{1,1}};
+        s.searchMatrix(matrix,2);
     }
 }

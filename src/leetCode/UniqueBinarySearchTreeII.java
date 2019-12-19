@@ -28,9 +28,6 @@ public class UniqueBinarySearchTreeII {
             return list;
         }
 
-        if (start == end) {
-            list.add(new TreeNode(start));
-            return list;
             List<TreeNode> left, right;
             for (int i = start; i <= end; i++) {
                 left = genHelp(start, i - 1);
