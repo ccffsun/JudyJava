@@ -1,6 +1,6 @@
 package leetCode;
 
-public class SearchA2DMatrixI {
+public class SearchA2DMatrixII {
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix.length == 0) return false;
 
@@ -54,5 +54,6 @@ public class SearchA2DMatrixI {
                 row++;
             }
         }
+        return false;
     }
 }
