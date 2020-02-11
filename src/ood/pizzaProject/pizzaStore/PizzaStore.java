@@ -6,13 +6,13 @@ public abstract class  PizzaStore {
 
 
     public Pizza orderPizza(String type) {
-        Pizza p=null;
-        p=creatPizza(type);
-        p.prepare();
-        p.bake();
-        p.cut();
-        p.box();
-        return p;
+        Pizza pizza=null;
+        pizza=creatPizza(type);
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
+        pizza.box();
+        return pizza;
     }
     public abstract Pizza creatPizza(String type);
 }

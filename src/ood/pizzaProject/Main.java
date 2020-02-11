@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args) {
         PizzaStore ps = new NYStylePizzaStore();
         Pizza p = ps.orderPizza("Cheese");
-        System.out.println(p.getDescription());
+        System.out.println(p.getName());
         ps=new ChicagoStylePizzaStore();
         p=ps.orderPizza("Veggie");
-        System.out.println(p.getDescription());
+        System.out.println(p.getName());
     }
 }
