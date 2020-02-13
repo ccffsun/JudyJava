@@ -29,7 +29,8 @@ public class Singleton {
     private Singleton() {}
     //other instance var
     public static synchronized Singleton getInstance() {
-        if(uniqueInstance == null) {
+        if(uniqueInstance == null) {            //only when the uniqueInstance==null ,Singleton.class will be
+                                                  synchronized, which making a better performance than the first one.
           synchronized (Singleton.class) {
               if(uniqueInstance == null) {
                  uniqueInstance = new Singleton();
