@@ -37,4 +37,20 @@ public class TwoSum {
         }
         throw new IllegalArgumentException("No two sum solution");
     }
+
+    public int[] onepassSolution (int [] nums, int target) {
+        HashMap <Integer,Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[] { i , map.get(complement)};
+            }
+            map.put (nums[i],i );
+            /*
+            Checking containsKey(complement) then putting nums and i
+             into the map perfectly avoid the case: map.get(complement)==i.
+             */
+        }
+        throw new IllegalArgumentException("no two sum solution! ");
+    }
 }
