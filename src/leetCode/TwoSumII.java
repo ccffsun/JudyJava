@@ -37,7 +37,7 @@ public class TwoSumII {
             int leftElement = nums[left];
             int rightElement = nums[right];
             if (leftElement + rightElement == target) {
-                return new int[] { left+1 , right+1};
+                return new int[] {left+1 , right+1};
             }else if(leftElement + rightElement > target) {
                 right--;
             }else {
