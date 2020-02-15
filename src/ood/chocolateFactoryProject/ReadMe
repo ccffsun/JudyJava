@@ -1,0 +1,52 @@
+Singleton pattern:
+
+Saying that we have a class MyClass here:
+    public Class MyClass {
+    ...
+    }
+we sure we can new the class as many as we can, so we got many instances. However in the industry some class may need
+to control its instantiation, including when to get the instance and how many we want. In some cases we only want one
+instance for the reason like:
+
+* the class is used only once, like thread pool, cache, registry ect.
+* to avoid programmers make mistakes, when there are more than one instances, error occurs.
+
+Think as Socrates:
+
+1.How to control the instantiation? The class is public, but the constructor can be private.
+  public class MyClass{
+      private MyClass(){}
+  }
+
+
+2.If the constructor is private how to do the instantiation?
+  The other public methods in the class can call the constructor.
+  public class MyClass{
+      private MyClass(){}
+      public MyClass getInstance(){
+        return new MyClass();
+      }
+  }
+
+3.There is a problem for the getInstance method: when there is no instance of the class, how to call the getInstance()?
+  Let's count on the access modifier static.
+  public class MyClass{
+     private MyClass(){}
+     public static MyClass getInstance(){
+        return new MyClass();
+    }
+  }
+
+4.How about if you only need one instance? Can you try the if()....
+  This is called lazy instantiaze.
+
+  public class MyClass(
+    MyClass uniqueInstance;
+    private MyClass(){}
+    public static MyClass getInstance(){
+        if(uniqueInstance == null){
+            uniqueInstance = new MyClass();
+        }
+        return uniqueInstance;
+    }
+
