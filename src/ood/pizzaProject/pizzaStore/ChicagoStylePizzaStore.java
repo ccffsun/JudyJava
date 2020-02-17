@@ -6,7 +6,7 @@ import ood.pizzaProject.pizza.Pizza;
 
 public class ChicagoStylePizzaStore extends PizzaStore{
     @Override
-    public Pizza creatPizza(String type) {
+    public Pizza createPizza(String type) {
         Pizza p = null;
         if (type.equals("Cheese")) {
             p = new ChicagoStyleCheesePizza();

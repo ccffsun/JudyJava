@@ -1,12 +1,10 @@
 package ood.pizzaProject2.pizza;
 
-import ood.pizzaProject.pizza.Pizza;
-
 public abstract class PizzaStore {
 
 
     public Pizza orderPizza(String type) {
-        Pizza pizza=null;
+        ood.pizzaProject2.pizza.Pizza pizza=null;
         pizza=createPizza(type);
         pizza.prepare();
         pizza.bake();
