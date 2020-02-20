@@ -20,7 +20,7 @@ public abstract class CaffeineBeverage {
     abstract void brew();
     abstract void addCondiments();
 
-    final void boilWater(){         //final can't not  override by child class's method
+    final void boilWater(){         //final can not override by child class's method
         System.out.println("Boiling water");
     }
 

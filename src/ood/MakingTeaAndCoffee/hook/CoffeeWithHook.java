@@ -35,7 +35,7 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
         try{
             answer = in.readLine();
         }catch (IOException ioe){
-            System.out.println("IO error trying to read your answer");
+            System.err.println("IO error trying to read your answer");
         }
         if(answer == null){
             return "no";
@@ -44,3 +44,14 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
 
     }
 }
+
+/*
+  USE BufferedReader instead of Scanner
+
+  BufferedReader  buff = new BufferedReader(new InputStreamReader(System.in));
+  try{
+     answer = buff.readLine();
+     }catch(IOException ioe){
+      System.err.println("IO error trying to read your answer");
+       }
+ */

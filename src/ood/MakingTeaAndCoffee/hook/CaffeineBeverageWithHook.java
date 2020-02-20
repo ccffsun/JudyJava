@@ -14,7 +14,7 @@ public abstract class CaffeineBeverageWithHook {
     abstract void brew();
     abstract void addCondiments();
 
-    final void boilWater(){         //final can't not  override by child class's method
+    final void boilWater(){
         System.out.println("Boiling water");
     }
 
