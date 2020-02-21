@@ -36,4 +36,21 @@ public class MergeSortedArray {
             }
         }
     }
+
+    public void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int end1 = m - 1;
+        int end2 = n - 1;
+        int k = nums1.length - 1;
+
+        while(end2 > 0) {
+            if(end1 >= 0 && nums1[end1] >= nums2[end2]){
+                nums1[k] = nums1[end1];
+                end1--;
+            }else{
+                nums1[k] = nums2[end2];
+                end2--;
+            }
+            k--;
+        }
+    }
 }
