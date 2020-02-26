@@ -2,7 +2,7 @@ package ood.DuckCompare;
 
 public class DuckSort {
 
-    public static void srot (Object[] a){
+    public static void sort (Object[] a){
         Object aux[] = (Object[])a.clone();
         mergeSort(aux, a,0,a.length,0);
     }
