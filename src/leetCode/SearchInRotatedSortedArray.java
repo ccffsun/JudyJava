@@ -51,3 +51,25 @@ public class SearchInRotatedSortedArray {
         return -1;
     }
 }
+/*
+How many times is a sorted array rotated ?
+find k
+ public int searchK(int[]array){
+
+        int left = 0;
+        int right = nums.length-1;
+        int mid = left + (right - left)/2;
+        int k;
+        while (left <= right) {
+
+            if(array[left] <= array[right]){
+                k = left;
+                return k;
+            } else if(array[left] > array[mid]){
+                right = mid;
+            }else{
+                left = mid +1;
+            }
+        }
+    }
+ */
