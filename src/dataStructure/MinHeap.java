@@ -40,13 +40,13 @@ public class MinHeap {
        System.out.println("");
    }
 
-   public void insert (int x) {
+   public void insert (int x) {    //insert to the end of the array
        if(size == capacity) {
            System.out.println("Heap is full!");
            return;
        }
        size++;
-       int idx = size;
+       int idx = size; //int idx = ++size;
        array[idx] = x;
        percolateUp(idx);
    }
