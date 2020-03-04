@@ -47,7 +47,7 @@ public class SmallestKElementsInUnsortedArray {
         for(int i = 0; i< array.length; i++) {
             if(i < k) {
                 maxHeap.offer(array[i]);
-            }else if(array[i] <maxHeap.peek()){
+            }else if(array[i] < maxHeap.peek()){
                 maxHeap.poll();
                 maxHeap.offer(array[i]);
             }
