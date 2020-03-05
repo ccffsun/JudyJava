@@ -3,7 +3,8 @@ package java1;
 
 
 public class MyClass {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception {
+       /*
         String name= "John";
         System.out.println(name);
         int myNum=15;
@@ -35,6 +36,18 @@ public class MyClass {
         for(int i=f.length-1;i>=0;i--){
             System.out.println(f[i]);
         }
+
+        */
+       TEST test = new TEST();
+       try {
+           test.dog();
+       }catch (Exception e) {
+           System.out.println(" ");
+           //throw e;
+       }finally {
+           System.out.println("Hello world");
+       }
+
 
 
     }
