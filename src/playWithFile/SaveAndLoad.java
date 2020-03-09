@@ -32,4 +32,14 @@ public class SaveAndLoad {
         }
         return result;
     }
+
+    public void clearFileData() {
+        try {
+            FileWriter fw = new FileWriter(filePath);
+            fw.write("");
+            fw.close();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
