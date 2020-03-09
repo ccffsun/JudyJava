@@ -6,7 +6,7 @@ public class Main {
     public static void main (String []args) {
         SaveAndLoad sl = new SaveAndLoad();
         while(true){
-            System.out.println("Please choose a option: \n1.input \n2.read \n3.quit \n4.clear ");
+            System.out.println("Please choose a option: \n(input 1 ,2 ,3 or 4)\n\n1.input \n2.read \n3.quit \n4.clear ");
             Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine();
             if(s.equals("1")){
